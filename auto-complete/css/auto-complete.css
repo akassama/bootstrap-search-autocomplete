@@ -1,0 +1,9 @@
+a:link {
+  text-decoration: none;
+}
+a:hover {
+    background-color: #F5F5F5 !important;
+	color: black;
+	text-transform: lowercase;
+	font-weight: bold;
+}
