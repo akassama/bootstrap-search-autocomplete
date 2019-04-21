@@ -43,7 +43,12 @@ $(document).ready(function () {
 	});
 });
 
-
+//Close results when you click outside
+$(document).on('click', function (e) {
+    if ($(e.target).closest("#auto-list").length === 0) {
+        resetAll();
+    }
+});
 </script>
 
 <div class="container">
@@ -55,7 +60,7 @@ $(document).ready(function () {
 		  <input type="text" class="form-control" id="prog-name">
 		</div>
 
-		<div class="card" id="auto-list">
+		<div class="card auto-complete" id="auto-list">
 		  
 		</div>  
 	</div>
