@@ -1,5 +1,5 @@
 # bootstrap-search-autocomplete
 A search input with auto completion suggestions list.
 
-# Sample Demo
+# Sample Gif
 ![](images/autocomplete.gif)
