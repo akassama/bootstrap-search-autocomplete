@@ -1,7 +1,7 @@
-a:link {
+.auto-complete a:link {
   text-decoration: none;
 }
-a:hover {
+.auto-complete a:hover {
     background-color: #F5F5F5 !important;
 	color: black;
 	text-transform: lowercase;
