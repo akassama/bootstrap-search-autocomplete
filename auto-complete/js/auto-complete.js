@@ -35,3 +35,38 @@ function resetAll(){
 	$('#auto-list').empty();
 	$("#auto-list").hide();
 }
+
+
+//Comma separated data source
+var dataSource = "c++, c#, python, swift, kotlin, java, coldfusion, asp, ruby, rust, php, perl, pascal, pearl, scala"; 
+//var dataSource = getJsonData(); //Data from json. See: /auto-complete/js/auto-complete.js
+
+//convert data to array
+var dataArray = dataSource.trim().split(","); 
+
+
+$(document).ready(function () {
+	$("#auto-list").hide();
+	
+	//Called when input is the the field. 0.5 sec delay
+	$("#prog-name").keyup(function() {
+		var searchVal = $("#prog-name").val();
+		
+		setTimeout(function(){
+			if(searchVal.trim() != ""){
+				printList(dataArray, searchVal);
+			}
+			else{
+				resetAll();
+			}
+		}, 500);
+		
+	});
+});
+
+//Close results when you click outside
+$(document).on('click', function (e) {
+    if ($(e.target).closest("#auto-list").length === 0) {
+        resetAll();
+    }
+});
